@@ -1,4 +1,4 @@
-## Document Clustering with Python
+## Document Clustering with Python 3
 
 This is my revision of the great tutorial at http://brandonrose.org/clustering - many thanks to the author.
 
@@ -14,21 +14,20 @@ This is my revision of the great tutorial at http://brandonrose.org/clustering -
 First, clone the repo, go to the repo folder, setup the virtual environment, and install the required packages:
 
 ```
-git clone https://github.com/harrywang/document_clustering.git
-cd document_clustering
-virtualenv venv
-source venv/bin/activate
-pip install -r requirements.txt
+$ cd path_to_document-clustering
+$ virtualenv -p python3 venv
+$ source venv/bin/activate
+$ pip3 install -r requirements.txt
 ```
-Second, use nltk.download() to download all nltk packages, which are saved to /Users/your_mac_username/nltk_data (about 3.5G)
+Second, use nltk.download() to download all nltk packages (a GUI will open and you can choose to install all packages: ~ 3.5G), which are saved to /Users/your_mac_username/nltk_data
 
 ```
-ipython2
+ipython
 import nltk
 nltk.download()
 ```
 
-Lastly, run `ipython2 notebook` to learn the tutorial step-by-step.
+Lastly, run `$ jupyter notebook` to go over the tutorial step-by-step.
 
 ## Key Steps
 1. **Read data**: read titles, genres, synopses, rankings into four arrays

@@ -1,4 +1,6 @@
 jupyter
-pandas
 matplotlib
+pandas
 seaborn
+scikit-learn
+

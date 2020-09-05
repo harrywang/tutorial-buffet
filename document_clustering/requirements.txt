@@ -1,7 +1,7 @@
-jupyter
-pandas
-nltk
-sklearn
 bs4
-scipy
+jupyter
 matplotlib
+nltk
+pandas
+scikit-learn
+scipy

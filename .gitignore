@@ -104,3 +104,7 @@ ENV/
 
 .npy
 .pkl
+
+# vscode
+
+.vscode

@@ -1,0 +1,4 @@
+jupyter
+linearmodels
+matplotlib
+statsmodels

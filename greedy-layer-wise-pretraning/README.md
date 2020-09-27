@@ -1,4 +1,4 @@
-## Document Clustering with Python 3
+## About
 
 This is my revised code of the tutorial at https://machinelearningmastery.com/greedy-layer-wise-pretraining-tutorial/
 

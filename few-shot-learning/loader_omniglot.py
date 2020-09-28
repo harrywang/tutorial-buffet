@@ -2,9 +2,7 @@ import numpy as np
 import random
 import tensorflow
 from tensorflow import keras
-#from tensorflow.keras.utils import np_utils
 
-#from python.dataloader import loader
 
 class DataGenerator(tensorflow.keras.utils.Sequence):
     'Generates data for Keras'

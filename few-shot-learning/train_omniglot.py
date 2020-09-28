@@ -1,5 +1,18 @@
 import argparse
 import os
+
+from tensorflow.keras import callbacks as cb
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import load_model, Model, save_model
+from tensorflow.keras.layers import *
+
+# import from custom modules
+from loader_omniglot import DataGenerator
+from model_omniglot import conv_net
+from util.tensor_op import *
+from util.loss import *
+
+# command line argument parser
 def parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--train_way', dest='train_way', type=int, default=60)
@@ -7,36 +20,12 @@ def parser():
     parser.add_argument('--val_way', dest='val_way', type=int, default=20)
     parser.add_argument('--shot', dest='shot', type=int, default=1)
     parser.add_argument('--gpu', dest='gpu', type=int, default=0)
-    parser.add_argument('--epochs', dest='epochs', type=int, default=1)
+    parser.add_argument('--epochs', dest='epochs', type=int, default=2)
 
     return parser.parse_args()
 
 args = parser()
-os.environ["CUDA_VISIBLE_DEVICES"]=str(args.gpu)
-
-from tensorflow.keras import callbacks as cb
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import load_model, Model, save_model
-from tensorflow.keras.layers import *
-from tensorflow.keras.models import Sequential
-from tensorflow.keras import regularizers as rg
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.applications.xception import Xception
-from tensorflow.keras import backend as K
-
-
-import numpy.random as rng
-
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.image as img
-import random
-#from python.dataloader import loader
-from loader_omniglot import DataGenerator
-from model_omniglot import conv_net, hinge_loss, l2_distance, acc, l1_distance
-#from transform import transform_gate
-from util.tensor_op import *
-from util.loss import *
+os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
 
 # get values from the command line arguments
 train_way = args.train_way
@@ -45,6 +34,7 @@ val_way = args.val_way
 shot = args.shot
 epochs = args.epochs
 
+# specify model parameters
 input_shape = (None, 28, 28, 1)
 batch_size = 20
 lr = 0.002
@@ -58,7 +48,7 @@ def scheduler(epoch):
 class SaveConv(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
         if epoch % 50 == 0:
-            save_model(conv, f"model/omniglot_conv_epoch{epoch}_shot{shot}_val_way{val_way}")
+            save_model(conv, f"model/omniglot_conv_{epoch}_{shot}_{val_way}")
 
 if __name__ == "__main__":
     conv = conv_net()
@@ -69,6 +59,7 @@ if __name__ == "__main__":
     inp = Input(input_shape)
     map_feature = conv_5d(inp)
     map_feature = Lambda(reshape_query)(map_feature)
+    # proto_dist is from util/loss.py
     pred = Lambda(proto_dist)([out_feature, map_feature]) #negative distance
     combine = Model([sample, inp], pred)
 

@@ -31,7 +31,9 @@ Note that we split (1200 * 4(rotate 4 direction)) classes for training and the r
 
 ## Train and Test
 
-in the root folder of this repo, run `python train_omniglot.py` to train 1 epoch by default (about 10 minutes on MacBook Pro). 
+To train:
+
+In the root folder of this repo, run `python train_omniglot.py` to train 2 epochs by default (about 10 minutes on MacBook Pro). 
 
 You can use different arguments:
 
@@ -39,6 +41,12 @@ You can use different arguments:
 - `python train_omniglot.py --train_way 60 --train_query 5 --val_way 20 --shot 1 --gpu 0[for specify the gpu]`
 
 temp checkpoints (with the format `omniglot_conv_{epoch}_{shot}_{val_way}`) and the final model `omniglot_conv` are saved in the `/model` folder (ignored by git)
+
+Show training visualization using Tensorboard, run `tensorboard --logdir=./logs --port=6006`
+
+Then, you can access TensorBoard at http://localhost:6006/
+
+<img width="729" alt="Screen Shot 2020-09-28 at 4 35 40 PM" src="https://user-images.githubusercontent.com/595772/94483335-b2c01b80-01a8-11eb-852c-b204fca31a10.png">
 
 To test: 
 

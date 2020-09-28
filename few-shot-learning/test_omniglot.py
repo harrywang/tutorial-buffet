@@ -1,5 +1,17 @@
 import argparse
 import os
+
+from tensorflow.keras import callbacks as cb
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import load_model, Model, save_model
+from tensorflow.keras.layers import *
+
+from loader_omniglot import DataGenerator
+from model_omniglot import conv_net
+from util.tensor_op import *
+from util.loss import *
+
+
 def parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--test_way', dest='test_way', type=int, default=5)
@@ -11,42 +23,21 @@ def parser():
 
 args = parser()
 os.environ["CUDA_VISIBLE_DEVICES"]=str(args.gpu)
-
-from tensorflow.keras import callbacks as cb
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import load_model, Model, save_model
-from tensorflow.keras.layers import *
-from tensorflow.keras.models import Sequential
-from tensorflow.keras import regularizers as rg
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.applications.xception import Xception
-from tensorflow.keras import backend as K
-
-
-import numpy.random as rng
-
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.image as img
-import random
-#from python.dataloader import loader
-from loader_omniglot import DataGenerator
-from model_omniglot import conv_net, hinge_loss, l2_distance, acc, l1_distance
-#from transform import transform_gate
-from util.tensor_op import *
-from util.loss import *
-input_shape = (None, 28, 28, 1)
-batch_size = 20
 test_way = args.test_way
 shot = args.shot
 model_path = args.model
+
+input_shape = (None, 28, 28, 1)
+batch_size = 20
 lr = 0.002
+
 
 def scheduler(epoch):
     global lr
     if epoch % 15 == 0:
         lr /= 2
     return lr
+
 
 class SaveConv(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
@@ -69,7 +60,7 @@ if __name__ == "__main__":
     optimizer = Adam(0.001)
     combine.compile(loss='categorical_crossentropy', optimizer=optimizer,
         metrics=['categorical_accuracy'])
-    test_loader = DataGenerator(data_type='test',way=test_way, shot=shot, num_batch=10000)
+    test_loader = DataGenerator(data_type='test', way=test_way, shot=shot, num_batch=10000)
 
     combine.evaluate(test_loader)
 

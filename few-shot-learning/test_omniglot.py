@@ -63,5 +63,3 @@ if __name__ == "__main__":
     test_loader = DataGenerator(data_type='test', way=test_way, shot=shot, num_batch=10000)
 
     combine.evaluate(test_loader)
-
-

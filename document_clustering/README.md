@@ -1,4 +1,6 @@
-## Document Clustering with Python 3
+## About
+
+Document Clustering with Python 3
 
 This is my revision of the great tutorial at http://brandonrose.org/clustering - many thanks to the author.
 

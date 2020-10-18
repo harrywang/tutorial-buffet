@@ -6,7 +6,7 @@ This is my revised code of the tutorial at:
 
 ## Setup
 
-for xgboost to work, do `brew install libomp` on Mac
+go to the tutorial folder and do the following:
 
 ```
 python3 -m venv venv

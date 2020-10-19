@@ -1,8 +1,6 @@
 ## About
 
-This is my revised code of the tutorial at:
-- https://machinelearningmastery.com/calculate-feature-importance-with-python/
-- https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/
+Grouped bar chart with percentage change using matplotlib. Excel version is at https://www.excelcampus.com/charts/column-chart-percentage-change/
 
 ## Setup
 

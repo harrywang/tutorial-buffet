@@ -1,7 +1,7 @@
 # About
 The examples at https://github.com/allegroai/clearml/tree/master/examples/frameworks
 
-By default, the results are logged to the demo server (no authorization configuration needed and all users SHARE all results!!): https://demoapp.trains.allegro.ai/login
+By default, the results are logged to the demo server (no authorization configuration needed and all users SHARE all results!!): https://demoapp.demo.clear.ml/
 # Setup and Run
 
 ```
@@ -14,8 +14,9 @@ $ python matplotlib/mlp_grouped_errorbar.py
 Then follow the address in the terminal to view the result:
 
 ```
-TRAINS results page: https://demoapp.trains.allegro.ai/projects/7b8167f284e0477389cd1d3701dad113/experiments/89618f511e4346debc7679d3f55ab8bc/output/log
+TRAINS results page: https://demoapp.demo.clear.ml/projects/7b8167f284e0477389cd1d3701dad113/experiments/8b702c7378854ca29dd68121ca40c92e/output/log
 ```
+<img width="1272" alt="Screen Shot 2020-12-22 at 7 11 25 PM" src="https://user-images.githubusercontent.com/595772/102944700-8b1bdf00-4489-11eb-9717-b327a2fb2de3.png">
 
 # Notes
 

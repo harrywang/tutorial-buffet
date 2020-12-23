@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.style.use('seaborn')
 
-from trains import Task
+from clearml import Task
 task = Task.init(project_name='examples', task_name='Matplotlib GroupedBar example by Harry')
 
 men_means = np.array([20, 35, 30, 35, 27])

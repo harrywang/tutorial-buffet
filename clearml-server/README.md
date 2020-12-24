@@ -17,3 +17,10 @@ Note: I set 6G for Docker
 
 <img width="1116" alt="Screen Shot 2020-12-24 at 10 42 26 AM" src="https://user-images.githubusercontent.com/595772/103097281-caa31200-45d4-11eb-8c51-e874e9506448.png">
 
+- to restart
+
+```
+docker-compose -f /opt/trains/docker-compose.yml down
+docker-compose -f /opt/trains/docker-compose.yml up -d
+```
+

@@ -2,6 +2,8 @@
 
 Setup ClearML server locally on Mac: https://allegro.ai/docs/deploying_trains/trains_server_linux_mac/
 
+For how to use ClearML, check out https://github.com/harrywang/tutorial-buffet/tree/master/clearml
+
 Note: I set 6G for Docker
 
 - Make sure docker is running correctly: `docker run hello-world`

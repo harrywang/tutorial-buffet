@@ -1,0 +1,4 @@
+jupyter
+imageio
+pillow
+pygifsicle

@@ -1,4 +1,0 @@
-fastai
-tensorboard
-tensorboardX
-trains

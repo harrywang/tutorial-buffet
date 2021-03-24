@@ -1,0 +1,5 @@
+jupyter
+SentencePiece
+transformers>=4.3.3
+datasets>=1.4.1
+torch>=1.8.0

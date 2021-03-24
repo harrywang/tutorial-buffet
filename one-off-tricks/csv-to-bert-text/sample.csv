@@ -1,0 +1,17 @@
+SentenceID,Sentences,SentiScore_food,SentiLabel_food
+1,"The pork tenderloin with mole sauce was perfect , and the side dishes added a lot of nice , fresh flavor.",5,POS
+2,"The food was definitely more ""upscale"" than traditional Mexican , so don't come here if you are looking for Qdoba style burritos and quesadillas.",4,POS
+3,"Another small bonus was the hard-to-find Sol beer , which was great with a lime.",4,POS
+4,"Speaking of lime , the guacamole starter was as fresh as it gets (made tableside) and had a nice kick to it!.",5,POS
+5,"After shopping around , my husband and I both think they have the best pizza around Highland Park.",5,POS
+8,It's a homey place with good food.,4,POS
+20,"We ordered 2 appetizers , 2 entrees  , 2 bottles of wine... food was very good not great.",4,POS
+29,"Food was ok , ",3,NEU
+40,The food came out in about 10 minutes and my skillet was cooked very well.,5,POS
+41,The sunny side up eggs here are some of the best I have ever had- they were slightly chewy and full of flavor.,5,POS
+42,"My skillet came with cheddar cheese mushroom , broccoli , and tomtaoes and it was a hearty meal that , when combined with ketchup and salt , delivered very satisfying feelings to my tastebuds and stomach.",5,POS
+43,I was slightly saddened that either they do not offer chalula here or that they ran out.,2,NEG
+44,Sometimes I feel that breakfast is just not complete without it and hope that they can stock up because that louisiana hot sauce they carried did not cut it.,2,NEG
+46,"They were hot and had a soft , spongy texture.",4,POS
+47,Pretty delicious and satisfied my sweet tooth.,4,POS
+50,Their sandwich specials looked great.,5,POS

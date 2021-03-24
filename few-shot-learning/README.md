@@ -15,6 +15,7 @@ pip install -r requirements.txt
 Then, you can use `jupyter notebook` or use VSCode `code .` to open the notebooks.
 
 ## Prepare Datasets
+Download dataset at https://drive.google.com/file/d/1UQEdAv4g_Mh2t15YtorNHkoHfQZJfmoE/view?usp=sharing
 
 For omniglot dataset:
 

@@ -1,16 +1,19 @@
-# TRAINS - Example of Pytorch mnist training integration
-#
 from __future__ import print_function
 import argparse
 import os
 from tempfile import gettempdir
+
+import matplotlib
+matplotlib.use('agg') # use agg instead of tkinter
+from PIL import Image
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
-
+# clearml code
 from clearml import Task, Logger
 
 
@@ -62,18 +65,29 @@ def test(args, model, device, test_loader, epoch):
             pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
             correct += pred.eq(target.view_as(pred)).sum().item()
 
+            # clearml code
+            plt.figure()
+            plt.imshow(data.numpy()[0], cmap='gray')
+
+
     test_loss /= len(test_loader.dataset)
 
+    # clearml code
     Logger.current_logger().report_scalar(
         "test", "loss", iteration=epoch, value=test_loss)
+    
+    # clearml code
     Logger.current_logger().report_scalar(
         "test", "accuracy", iteration=epoch, value=(correct / len(test_loader.dataset)))
+    
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
 
 def main():
+
+    # clearml code
     task = Task.init(project_name='examples', task_name='pytorch mnist train-harry')
 
     # Training settings

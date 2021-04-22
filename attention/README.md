@@ -1,6 +1,6 @@
 ## About
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1v_S1r-iPuuVAkqVo8hAL6-OsQ-hZhGx8]
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1v_S1r-iPuuVAkqVo8hAL6-OsQ-hZhGx8)
 
 
 I combined and revised the following tutorials:

@@ -1,8 +1,11 @@
 ## About
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1v_S1r-iPuuVAkqVo8hAL6-OsQ-hZhGx8]
+
+
 I combined and revised the following tutorials:
 - https://machinelearningmastery.com/how-does-attention-work-in-encoder-decoder-recurrent-neural-networks/
--  https://towardsdatascience.com/light-on-math-ml-attention-with-keras-dc8dbc1fad39
+- https://towardsdatascience.com/light-on-math-ml-attention-with-keras-dc8dbc1fad39
 
 ## Setup
 

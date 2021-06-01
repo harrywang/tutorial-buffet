@@ -1,5 +1,1 @@
 jupyter
-imbalanced-learn
-matplotlib
-pandas
-scikit-learn

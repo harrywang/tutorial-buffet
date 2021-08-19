@@ -1,0 +1,9 @@
+jupyter
+pandas
+matplotlib
+tensorflow
+tqdm
+sklearn
+networkx
+node2vec
+lightgbm

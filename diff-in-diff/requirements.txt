@@ -1,0 +1,3 @@
+jupyterlab
+scikit-learn
+statsmodels

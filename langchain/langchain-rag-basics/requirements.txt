@@ -1,0 +1,15 @@
+langchain
+openai
+python-dotenv
+pypdf
+yt_dlp
+pydub
+bs4
+tiktoken
+langchain_openai
+chromadb
+PyPDF2
+lark
+scikit-learn
+panel
+docarray

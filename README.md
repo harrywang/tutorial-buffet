@@ -4,6 +4,14 @@ This repo contains a set of data analysis tutorials in Python curated by me. I m
 
 Each tutorial may have different version requirements for certain packages. So, each tutorial will use a separate virtual environment. 
 
+For some tutorials, you may need to set API keys. You need to add a `.env` file and include the API keys as follows (see my blog post on [Manage Environment Variables in Python Projects](https://harrywang.me/env)):
+
+```
+OPENAI_API_KEY=sk-proj-xxxx
+LANGCHAIN_API_KEY=ls__69650xxxx
+REPLICATE_API_TOKEN=r8_W0V3rJxxx
+```
+
 To run each tutorial, you need to do the following at the root of this project - I use `document_clustering` tutorial as an example:
 
 ```
@@ -13,4 +21,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Then, you can use `jupyter notebook` or use VSCode `code .` to open the notebooks.
+Then, you can use VSCode `code .` to open the notebooks.

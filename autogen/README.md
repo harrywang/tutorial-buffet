@@ -1,0 +1,5 @@
+Start autogenstudio
+
+```
+autogenstudio ui
+```
